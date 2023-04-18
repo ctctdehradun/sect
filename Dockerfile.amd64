@@ -4,7 +4,7 @@
 # base system
 ################################################################################
 
-FROM ubuntu:rolling as system
+FROM ubuntu:22.10 as system
 
 
 
@@ -82,7 +82,7 @@ RUN apt-get update \
 ################################################################################
 # builder
 ################################################################################
-FROM ubuntu:rolling as builder
+FROM ubuntu:22.10 as builder
 
 
 RUN sed -i 's#http://archive.ubuntu.com/ubuntu/#mirror://mirrors.ubuntu.com/mirrors.txt#' /etc/apt/sources.list;
